@@ -1,0 +1,58 @@
+.singleChat {
+}
+
+.singleChatMatchDate {
+  text-align: center;
+  padding: 20px;
+  color: gray;
+}
+
+.singleChatMessage {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.singleChatImg {
+}
+
+.singleChatText {
+  margin-left: 10px;
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.singleChatTextAdmin {
+  margin-left: auto;
+  background-color: #29b3cd;
+  padding: 15px;
+  border-radius: 20px;
+  color: white;
+}
+
+.singelChatInputForm {
+  display: flex;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid lightgray;
+}
+
+.singelChatInputField {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: larger;
+}
+
+.singelChatInputBtn {
+  border: none;
+  margin-right: 20px;
+  background-color: white;
+  font-weight: bolder;
+  color: #29b3cd;
+  font-size: larger;
+  cursor: pointer;
+}
