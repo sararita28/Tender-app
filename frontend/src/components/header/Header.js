@@ -5,7 +5,7 @@ import ForumIcon from "@mui/icons-material/Forum";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import IconButton from "@material-ui/core/IconButton";
 import { Link, useHistory } from "react-router-dom";
-import logolight from "../logo/logo_light.png";
+import logolight from "../images/logo_light.png";
 
 export default function Header({ backButton }) {
   const history = useHistory();
@@ -16,9 +16,11 @@ export default function Header({ backButton }) {
           <ArrowBackIcon className="headerBack" fontSize="large" />
         </IconButton>
       ) : (
-        <IconButton>
-          <AccountCircleIcon className="headerIcon" fontSize="large" />
-        </IconButton>
+        <Link to="/account">
+          <IconButton>
+            <AccountCircleIcon className="headerIcon" fontSize="large" />
+          </IconButton>
+        </Link>
       )}
       <Link to="/">
         <img className="headerLogo" src={logolight} alt="tender logo" />

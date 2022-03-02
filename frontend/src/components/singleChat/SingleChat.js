@@ -30,9 +30,7 @@ export default function SingleChat() {
 
   return (
     <div className="singleChat">
-      <p className="singleChatMatchDate">
-        YOU MATCHED WITH BILL ON 0 2/04/2021
-      </p>
+      <p className="singleChatMatchDate">YOU MATCHED WITH BILL ON 02/04/2021</p>
       {messages.map((message) =>
         message.name ? (
           <div className="singleChatMessage">

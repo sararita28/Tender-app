@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap");
+
+.register {
+  height: calc(110vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #393e46;
+}
+
+.registerTitle {
+  font-size: 60px;
+  color: lightgray;
+}
+
+.registerForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Cairo", sans-serif;
+}
+
+.registerInput {
+  padding: 15px;
+}
+
+.registerInput,
+.registerButton,
+.registerLoginButton {
+  border: none;
+  border-radius: 25px;
+  width: 20vw;
+  margin: 10px;
+}
+
+.registerButton {
+  background-color: #29b3cd;
+  width: 22vw;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.registerButton:disabled {
+  cursor: not-allowed;
+}
+
+.registerLoginButton {
+  padding: 5px;
+  background-color: rgba(255, 166, 166);
+  width: 22vw;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Cairo", sans-serif;
+}

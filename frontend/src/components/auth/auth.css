@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+.loginContainer {
+  display: flex;
+}
+
+.loginBackground {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.loginPageBtns {
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  margin-left: 18%;
+}
+
+.loginBtn,
+.signupBtn {
+  width: 25vw;
+  padding: 15px;
+  margin-left: 15%;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-size: large;
+}
+
+.signupBtn {
+  margin-left: 120px;
+}
+
+.loginBtn:hover,
+.signupBtn:hover {
+  opacity: 0.8;
+}
