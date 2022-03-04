@@ -82,7 +82,8 @@ export default function Register() {
       </button>
       {error && (
         <span style={{ color: "red", marginTop: "10px" }}>
-          Something went wrong
+          Something went wrong. Please make sure all fields are filled and that
+          both the username and email are unique.
         </span>
       )}
     </div>

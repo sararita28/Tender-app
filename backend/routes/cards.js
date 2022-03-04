@@ -1,3 +1,5 @@
+//HERE USE THE INFO FROM THE USER MODEL BECAUSE YOU WANT YOUR CARDS TO BE USERS' CARDS.
+
 import express from "express";
 const router = express.Router();
 import Card from "../models/Card.js";

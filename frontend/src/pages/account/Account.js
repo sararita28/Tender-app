@@ -9,13 +9,20 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import CreateRoundedIcon from "@mui/icons-material/CreateRounded";
 import { Context } from "../../Context/Context.js";
 import { useContext } from "react";
-import Header from "../../components/header/Header";
+import axios from "axios";
 
 export default function Account() {
   const { user, dispatch } = useContext(Context);
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/users/${user._id}`, { data: { userId: user._id } });
+      window.location.replace("/auth");
+    } catch (err) {}
   };
 
   return (
@@ -29,10 +36,7 @@ export default function Account() {
       </div>
       <div className="accountInfoWrapper">
         <div className="editPhotoContainer">
-          <img
-            className="profilePicture"
-            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-          />
+          <img className="profilePicture" src={user.profilePic} />
           <IconButton>
             <AddRoundedIcon className="editPhotoIcon" fontSize="large" />
           </IconButton>
@@ -86,7 +90,9 @@ export default function Account() {
         <button className="accountLogout" onClick={handleLogout}>
           Logout
         </button>
-        <button className="deleteAccount">Delete Account</button>
+        <button className="deleteAccount" onClick={handleDelete}>
+          Delete Account
+        </button>
       </div>
     </div>
   );
