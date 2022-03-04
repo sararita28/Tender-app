@@ -6,5 +6,3 @@ Tech stack:
 -Mongoose
 -Cors
 -Axios
-
--FIX THE LOGIN WITH GOOGLE. KIND OF ALL OVER THE PLACE.
