@@ -1,11 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Tajawal:wght@500&display=swap");
+
 .accountContainer {
+  margin-bottom: 50px;
+}
+
+.accountTopBar {
+  justify-content: flex-end;
+  display: flex;
+  border: 1px solid #fafafa;
+  height: 60px;
+  padding: 20px;
 }
 
 .backToHomePage {
+  margin-left: auto;
+}
+
+.accountInfoWrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 .editPhotoContainer {
+  margin-top: 50px;
+  margin-left: 20px;
+  display: block;
+}
+
+.profilePicture {
+  width: 500px;
+  object-fit: cover;
+  border-radius: 0% 0% 25% 0%;
 }
 
 .editPhotoIcon {
+  position: absolute;
+  left: -10px;
+}
+
+.divForBio,
+.divForGender,
+.divForDOB,
+.divForGenderPref,
+.divForAgePref {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: larger;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.accountHeader {
+  font-family: "Tajawal", sans-serif;
+  margin: 20px;
+  font-size: 30px;
+}
+.accountBio {
+  border: 1px solid #fafafa;
+  min-height: 100px;
+}
+
+.genderOptions {
+  width: 150px;
+}
+
+.ageRangePreference {
+  border: 1px solid #fafafa;
+}
+
+.accountAgeRangeInput {
+  cursor: pointer;
+}
+
+.updateAccount,
+.accountLogout,
+.deleteAccount {
+  width: 200px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  transform: translate(70%, 0%);
+  border-radius: 25px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.deleteAccount:hover {
+  background-color: tomato;
+}
+
+.updateAccount:hover {
+  background-color: #29b3cd;
+}
+
+.accountLogout:hover {
+  background-color: lightgray;
 }
