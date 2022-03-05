@@ -34,9 +34,9 @@ export default function Cards() {
               onSwipe={onSwipe}
               onCardLeftScreen={() => onCardLeftScreen(user.name)}
             >
-              <div className="cardAndInfo">
-                <div className="card">{user.bio.substring(0, 750)}...</div>
-                <h3>
+              <div className="card">
+                {user.bio.substring(0, 750)}...
+                <h3 className="cardAuthor">
                   {user.name}, {user.age}
                 </h3>
               </div>
