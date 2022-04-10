@@ -11,6 +11,10 @@ export default function Register() {
   const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [profilePic, setProfilePic] = useState("");
+  const [genderOfInterest, setGenderOfInterest] = useState([]);
+  const [bio, setBio] = useState("");
+  const [matches, setMatches] = useState([]);
   const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -24,6 +28,10 @@ export default function Register() {
         gender,
         email,
         password,
+        profilePic,
+        genderOfInterest,
+        bio,
+        matches,
       });
       res.data && window.location.replace("/login");
     } catch (err) {
@@ -38,39 +46,144 @@ export default function Register() {
         <input
           type="text"
           placeholder="Please enter your username"
+          name="username"
           className="registerInput"
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
           type="text"
+          name="name"
           placeholder="Please enter your first name"
           className="registerInput"
           onChange={(e) => setName(e.target.value)}
         />
         <input
-          type="text"
+          type="number"
+          name="age"
           placeholder="Please enter your age"
           className="registerInput"
           onChange={(e) => setAge(e.target.value)}
         />
+        <div className="displayflex">
+          <label className="gendLabel" style={{ color: "lightgray" }}>
+            {" "}
+            I am a:
+          </label>
+          <div id="genderContainer">
+            <div>
+              <label htmlFor="woman.gender" className="gendLabel">
+                {" "}
+                Woman
+              </label>
+              <input
+                id="woman.gender"
+                type="radio"
+                name="gender"
+                value="woman"
+                className="registerInput"
+                onChange={(e) => setGender(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="man.gender" className="gendLabel">
+                Man
+              </label>
+              <input
+                id="man.gender"
+                type="radio"
+                value="man"
+                name="gender"
+                className="registerInput"
+                onChange={(e) => setGender(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
         <input
-          type="text"
-          placeholder="Please enter your gender"
-          className="registerInput"
-          onChange={(e) => setGender(e.target.value)}
-        />
-        <input
-          type="text"
+          type="email"
           placeholder="Please enter your email"
+          name="email"
           className="registerInput"
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           placeholder="Please enter your password"
+          name="password"
           className="registerInput"
           onChange={(e) => setPassword(e.target.value)}
         />
+        <div className="displayflex">
+          <label className="gendLabel" style={{ color: "lightgray" }}>
+            {" "}
+            I'm interested in:
+          </label>
+          <div id="genderOfIntContainer">
+            <div>
+              <label htmlFor="woman.genderOfInterest" className="gendLabel">
+                {" "}
+                Women
+              </label>
+              <input
+                id="woman.genderOfInterest"
+                type="radio"
+                name="genderOfInterest"
+                value="woman"
+                className="registerInput"
+                onChange={(e) => setGenderOfInterest(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="man.genderOfInterest" className="gendLabel">
+                Men
+              </label>
+              <input
+                id="man.genderOfInterest"
+                type="radio"
+                name="genderOfInterest"
+                value="man"
+                className="registerInput"
+                onChange={(e) => setGenderOfInterest(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="everyone.genderOfInterest" className="gendLabel">
+                {" "}
+                Everyone
+              </label>
+              <input
+                id="everyone.genderOfInterest"
+                type="radio"
+                name="genderOfInterest"
+                value="everyone"
+                className="registerInput"
+                onChange={(e) => setGenderOfInterest(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+        <input
+          type="text"
+          name="bio"
+          placeholder="Please enter your bio"
+          className="registerInput"
+          onChange={(e) => setBio(e.target.value)}
+          required={true}
+        />
+        <input
+          type="url"
+          name="profilePic"
+          required={false}
+          className="inputForProfilePic"
+          placeholder="Enter the url of your profile Picture here"
+        />
+        <div>
+          <img
+            src={setProfilePic} //this doesn't work
+            alt="profilepic"
+            className="profilePicRegister"
+          />
+        </div>
         <button className="registerButton" type="submit">
           Register
         </button>

@@ -1,5 +1,3 @@
-/* HERE THE PROBLEM THAT WE'RE EXPERIENCING IS THAT WE HAVE ASSIGNED BIOS, AGES ETC... TO CARDS, NOT TO USERS. */
-
 import React from "react";
 import "./account.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";

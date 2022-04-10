@@ -14,6 +14,7 @@ export default function Cards() {
   };
 
   const [users, setUsers] = useState([]);
+
   useEffect(() => {
     const fetchCards = async () => {
       const res = await axios.get("/cards");

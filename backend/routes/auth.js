@@ -6,7 +6,7 @@ import bcrypt from "bcrypt";
 //Register
 router.post("/register", async (req, res) => {
   try {
-    const salt = await bcrypt.genSalt(10); //to encrypt the password
+    const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
     const newUser = new User({
       username: req.body.username,
@@ -15,6 +15,10 @@ router.post("/register", async (req, res) => {
       gender: req.body.gender,
       email: req.body.email,
       password: hashedPassword,
+      profilePic: req.body.profilePic,
+      genderOfInterest: req.body.genderOfInterest,
+      bio: req.body.bio,
+      matches: req.body.matches,
     });
     const user = await newUser.save();
     res.status(200).json(user);
@@ -30,7 +34,7 @@ router.post("/login", async (req, res) => {
     !user && res.status(400).json("Incorrect credentials");
     const validated = await bcrypt.compare(req.body.password, user.password);
     !validated && res.status(400).json("Incorrect credentials");
-    const { password, ...others } = user._doc; // returns everything but the password
+    const { password, ...others } = user._doc;
     res.status(200).json(others);
   } catch (err) {
     res.status(500).json(err);

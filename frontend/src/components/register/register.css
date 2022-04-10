@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap");
 
 .register {
-  height: calc(110vh - 60px);
+  /* height: calc(160vh -90px);*/
+  padding-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #393e46;
+  background-size: cover;
 }
 
 .registerTitle {
@@ -53,4 +55,59 @@
   cursor: pointer;
   font-size: 20px;
   font-family: "Cairo", sans-serif;
+}
+
+.displayflex {
+  display: flex;
+  margin: 10px;
+}
+
+#genderOfIntContainer,
+#genderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+#genderOfIntContainer input,
+#genderContainer input {
+  margin-right: 10px;
+}
+
+#genderOfIntContainer label,
+#genderContainer label {
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 25px;
+  transition: all 0.3s;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#genderOfIntContainer label:hover,
+#genderContainer label:hover {
+  opacity: 0.8;
+}
+
+#genderOfIntContainer input[type="radio"],
+#genderContainer input[type="radio"] {
+  display: none;
+}
+
+#genderOfIntContainer input[type="radio"]:checked + label,
+#genderContainer input[type="radio"]:checked + label {
+  border: solid 2px rgba(255, 166, 166);
+}
+
+.gendLabel {
+  margin-left: 15px;
+}
+
+.profilePicRegister {
+  max-width: 400px;
+}
+
+.inputForProfilePic {
+  width: 22vw;
 }

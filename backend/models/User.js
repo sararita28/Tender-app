@@ -32,6 +32,18 @@ const UserSchema = new mongoose.Schema(
     profilePic: {
       type: String,
       default: "",
+      required: false,
+    },
+    genderOfInterest: {
+      type: Array,
+      required: true,
+    },
+    bio: {
+      type: String,
+      required: true,
+    },
+    matches: {
+      type: Array,
     },
   },
   { timestamps: true }
