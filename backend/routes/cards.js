@@ -11,14 +11,6 @@ router.post("/", (req, res) => {
     else res.status(201).send(data);
   });
 });
- 
-//Get all cards
-/*router.get("/", (req, res) => {
-  Card.find((err, data) => {
-    if (err) res.status(500).send(err);
-    else res.status(200).send(data);
-  });
-});*/
 
 //Get all cards
 router.get("/", (req, res) => {

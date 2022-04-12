@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 import User from "../models/User.js";
-import bcrypt from "bcrypt";
+import bcrypt from "bcrypt"; 
 
 //UPDATE A USER
 router.put("/:id", async (req, res) => { 

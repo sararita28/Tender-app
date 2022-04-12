@@ -11,7 +11,6 @@ export default function Register() {
   const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [profilePic, setProfilePic] = useState("");
   const [genderOfInterest, setGenderOfInterest] = useState([]);
   const [bio, setBio] = useState("");
   const [matches, setMatches] = useState([]);
@@ -28,7 +27,6 @@ export default function Register() {
         gender,
         email,
         password,
-        profilePic,
         genderOfInterest,
         bio,
         matches,
@@ -71,7 +69,10 @@ export default function Register() {
           </label>
           <div id="genderContainer">
             <div>
-              <label htmlFor="woman.gender" className="gendLabel">
+              <label
+                htmlFor="woman.gender"
+                className="gendLabel womanGendRegister"
+              >
                 {" "}
                 Woman
               </label>
@@ -170,20 +171,6 @@ export default function Register() {
           onChange={(e) => setBio(e.target.value)}
           required={true}
         />
-        <input
-          type="url"
-          name="profilePic"
-          required={false}
-          className="inputForProfilePic"
-          placeholder="Enter the url of your profile Picture here"
-        />
-        <div>
-          <img
-            src={setProfilePic} //this doesn't work
-            alt="profilepic"
-            className="profilePicRegister"
-          />
-        </div>
         <button className="registerButton" type="submit">
           Register
         </button>

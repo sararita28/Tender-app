@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap");
 
 .register {
-  /* height: calc(160vh -90px);*/
   padding-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #393e46;
-  background-size: cover;
+  min-height: 100vh;
 }
 
 .registerTitle {
@@ -32,13 +31,13 @@
 .registerLoginButton {
   border: none;
   border-radius: 25px;
-  width: 20vw;
+  width: 25vw;
   margin: 10px;
 }
 
 .registerButton {
   background-color: #29b3cd;
-  width: 22vw;
+  width: 27vw;
   font-size: 20px;
   padding: 10px;
   cursor: pointer;
@@ -51,7 +50,7 @@
 .registerLoginButton {
   padding: 5px;
   background-color: rgba(255, 166, 166);
-  width: 22vw;
+  width: 27vw;
   cursor: pointer;
   font-size: 20px;
   font-family: "Cairo", sans-serif;
@@ -71,6 +70,10 @@
   margin-left: 20px;
 }
 
+.womanGendRegister {
+  margin-left: 70px;
+}
+
 #genderOfIntContainer input,
 #genderContainer input {
   margin-right: 10px;
@@ -78,13 +81,14 @@
 
 #genderOfIntContainer label,
 #genderContainer label {
-  padding: 10px;
+  cursor: pointer;
   background-color: lightgray;
   border-radius: 25px;
+  padding: 10px;
   transition: all 0.3s;
   margin-right: 10px;
-  cursor: pointer;
 }
+
 #genderOfIntContainer label:hover,
 #genderContainer label:hover {
   opacity: 0.8;
@@ -98,10 +102,7 @@
 #genderOfIntContainer input[type="radio"]:checked + label,
 #genderContainer input[type="radio"]:checked + label {
   border: solid 2px rgba(255, 166, 166);
-}
-
-.gendLabel {
-  margin-left: 15px;
+  background: tomato;
 }
 
 .profilePicRegister {

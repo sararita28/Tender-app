@@ -27,7 +27,8 @@ export default function Cards() {
     <div>
       <div className="cardsContainer">
         {users.map((user) => (
-          <Link to={`/users/${user._id}`}>
+          <div>
+            {/*<Link to={`/users/${user._id}`}>*/}
             <Card
               className="swipe"
               key={user.name}
@@ -36,13 +37,16 @@ export default function Cards() {
               onCardLeftScreen={() => onCardLeftScreen(user.name)}
             >
               <div className="card">
-                {user.bio.substring(0, 750)}...
+                {/*{user.bio.substring(0, 750)}...*/}
+                {user.bio}
                 <h3 className="cardAuthor">
-                  {user.name}, {user.age}
+                  {user.name}, {user.age} <br />
+                  {user.gender}
                 </h3>
               </div>
             </Card>
-          </Link>
+            {/*</Link>*/}
+          </div>
         ))}
       </div>
     </div>

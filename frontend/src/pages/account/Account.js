@@ -1,5 +1,6 @@
 import React from "react";
 import "./account.css";
+import { useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import IconButton from "@material-ui/core/IconButton";
 import { Link } from "react-router-dom";
@@ -14,6 +15,8 @@ export default function Account() {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
+
+  const [profilePic, setProfilePic] = useState("");
 
   return (
     <div className="accountContainer">
@@ -30,16 +33,16 @@ export default function Account() {
         </h2>
         <form id="account-form">
           <section>
-            <label className="settinsLabelTitle">Bio</label>
-            <input id="about" type="text" placeholder={user.bio} />
             <label className="settinsLabelTitle">Age</label>
             <input id="age" type="number" placeholder={user.age} />
             <label className="settinsLabelTitle">Gender</label>
             <input id="gender" type="text" placeholder={user.gender} />
-            <label className="settinsLabelTitle">Email</label>
-            <input id="email" type="text" placeholder={user.email} />
             <label className="settinsLabelTitle">Password</label>
             <input id="password" type="password" placeholder={user.password} />
+            <label className="settinsLabelTitle">Email</label>
+            <input id="email" type="text" placeholder={user.email} />
+            <label className="settinsLabelTitle">Bio</label>
+            <input id="about" type="text" placeholder={user.bio} />
             <h2 className="settingsHeader">Interests/Preferences</h2>
             <label className="settinsLabelTitle">I'm interested in:</label>
             <div className="multiple-input-container">
@@ -67,6 +70,7 @@ export default function Account() {
                   user.profilePic ||
                   "https://devshift.biz/wp-content/uploads/2017/04/profile-icon-png-898.png"
                 }
+                onChange={(e) => setProfilePic(e.target.value)}
               />
             </div>
           </section>

@@ -6,19 +6,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { useLocation } from "react-router";
+import { Context } from "../../Context/Context.js";
+import { useContext } from "react";
 
 export default function Users() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
-  const [user, setUser] = useState([]);
-
-  useEffect(() => {
-    const getUser = async () => {
-      const res = await axios.get("/cards/" + path);
-      setUser(res.data);
-    };
-    getUser();
-  }, [path]);
+  const { user } = useContext(Context);
 
   return (
     <div>

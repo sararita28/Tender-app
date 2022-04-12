@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Tajawal:wght@500&display=swap");
-/*  
-font-family: "Poppins", sans-serif;
-  font-family: "Tajawal", sans-serif;
-*/
 
 .accountContainer {
   margin-bottom: 50px;
@@ -86,8 +82,9 @@ font-family: "Poppins", sans-serif;
 }
 
 #account-form input[type="number"],
-#gender {
-  width: 10%;
+#gender,
+#password {
+  width: 12%;
 }
 
 #account-form .multiple-input-container input[type="radio"] {
@@ -110,7 +107,4 @@ font-family: "Poppins", sans-serif;
 
 #account-form .photo-container img {
   width: 100%;
-}
-
-#settingsLogoutBtn {
 }
