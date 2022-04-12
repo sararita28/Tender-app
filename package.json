@@ -21,7 +21,6 @@
     "url": "https://github.com/sararita28/Tender-app/issues"
   },
   "homepage": "http://sararita28.github.io/Tender-app",
-  //"homepage": "https://github.com/sararita28/Tender-app#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
