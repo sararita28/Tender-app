@@ -1,1 +1,0 @@
-/* Here I want to create a get method to fetch the messages with a certain userId. I might need to use socket.io */

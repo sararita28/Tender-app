@@ -1,4 +1,4 @@
-import express from "express";
+/*import express from "express";
 const router = express.Router();
 import multer from "multer";
 
@@ -17,3 +17,4 @@ router.post("/", upload.single("profilePicture"), (req, res) => {
 });
 
 export default router;
+*/

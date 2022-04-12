@@ -17,3 +17,4 @@ Tech stack:
 - Fix the profile pic not working when registering
 - Fix the account/settings page
 - Faire en sorte que les cards qui show sont celles que l'on update depuis le account/setting
+-

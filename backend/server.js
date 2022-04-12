@@ -6,8 +6,7 @@ const port = process.env.port || 3000;
 import authRoute from "./routes/auth.js";
 import cardsRoute from "./routes/cards.js";
 import usersRoute from "./routes/users.js";
-//import chatsRoute from "./routes/chats.js";
-import profileImagesRoute from "./routes/profileImages.js";
+//import profileImagesRoute from "./routes/profileImages.js";
 
 //App config
 const app = express();
@@ -36,7 +35,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/cards", cardsRoute);
 app.use("/api/users", usersRoute);
 //app.use("/api/chats", chatsRoute);
-app.use("/api/upload", profileImagesRoute);
+//app.use("/api/upload", profileImagesRoute);
 
 //Listener
 app.listen(port, () => {

@@ -11,16 +11,8 @@ import axios from "axios";
 
 export default function Account() {
   const { user, dispatch } = useContext(Context);
-
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
-  };
-
-  const handleDelete = async () => {
-    try {
-      await axios.delete(`/users/${user._id}`, { data: { userId: user._id } });
-      window.location.replace("/auth");
-    } catch (err) {}
   };
 
   return (
@@ -32,65 +24,53 @@ export default function Account() {
           </IconButton>
         </Link>
       </div>
-      <div className="accountInfoWrapper">
-        <div className="editPhotoContainer">
-          <img className="profilePicture" src={user.profilePic} />
-          <IconButton>
-            <AddRoundedIcon className="editPhotoIcon" fontSize="large" />
-          </IconButton>
-        </div>
-        <h3 className="accountHeader">About</h3>
-        <div className="divForBio">
-          <label>Bio</label>
-          <p className="accountBio" style={{ border: "1px solid black" }}>
-            This should be the person's bio
+      <div className="onboarding">
+        <h2 className="settingsHeader" id="accountheader">
+          {user.name}'s Account Settings{" "}
+        </h2>
+        <form id="account-form">
+          <section>
+            <label className="settinsLabelTitle">Bio</label>
+            <input id="about" type="text" placeholder={user.bio} />
+            <label className="settinsLabelTitle">Age</label>
+            <input id="age" type="number" placeholder={user.age} />
+            <label className="settinsLabelTitle">Gender</label>
+            <input id="gender" type="text" placeholder={user.gender} />
+            <label className="settinsLabelTitle">Email</label>
+            <input id="email" type="text" placeholder={user.email} />
+            <label className="settinsLabelTitle">Password</label>
+            <input id="password" type="password" placeholder={user.password} />
+            <h2 className="settingsHeader">Interests/Preferences</h2>
+            <label className="settinsLabelTitle">I'm interested in:</label>
+            <div className="multiple-input-container">
+              <input id="woman-gender-identity" type="radio" checked={false} />
+              <label>Women</label>
+              <input id="man-gender-identity" type="radio" checked={false} />
+              <label>Men</label>
+              <input id="more-gender-identity" type="radio" checked={false} />
+              <label>Everyone</label>
+            </div>
+            <input type="submit" value="Update" />
+            <button id="settingsLogoutBtn" onClick={handleLogout}>
+              Logout
+            </button>
+          </section>
+
+          <section>
+            <label className="settinsLabelTitle">Profile Picture</label>
             <IconButton>
-              <CreateRoundedIcon />
-            </IconButton>
-          </p>
-        </div>
-        <div className="divForGender">
-          <label>Gender</label>
-          <select className="genderOptions">
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div className="divForDOB">
-          <label>DOB</label>
-          <input type="date" id="birthday"></input>
-        </div>
-        <div>
-          <h3 className="accountHeader">Interests/Preferences</h3>
-          <div className="divForGenderPref">
-            <lavel>Gender</lavel>
-            <select className="genderOptions">
-              <option>Male</option>
-              <option>Female</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div className="divForAgePref">
-            <lavel>Age Range</lavel>
-            <input
-              className="accountAgeRangeInput"
-              type="range"
-              min="18"
-              max="100"
-            ></input>
-            <output className="ageRangePreference">
-              Here you display the 2 values{" "}
-            </output>
-          </div>
-        </div>
-        <button className="updateAccount">Update Changes</button>
-        <button className="accountLogout" onClick={handleLogout}>
-          Logout
-        </button>
-        <button className="deleteAccount" onClick={handleDelete}>
-          Delete Account
-        </button>
+              <AddRoundedIcon className="editPhotoIcon" fontSize="large" />
+            </IconButton>{" "}
+            <div className="photo-container">
+              <img
+                src={
+                  user.profilePic ||
+                  "https://devshift.biz/wp-content/uploads/2017/04/profile-icon-png-898.png"
+                }
+              />
+            </div>
+          </section>
+        </form>
       </div>
     </div>
   );

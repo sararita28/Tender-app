@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Tajawal:wght@500&display=swap");
+/*  
+font-family: "Poppins", sans-serif;
+  font-family: "Tajawal", sans-serif;
+*/
 
 .accountContainer {
   margin-bottom: 50px;
@@ -15,86 +19,98 @@
 .backToHomePage {
   margin-left: auto;
 }
+/*************************************/
 
-.accountInfoWrapper {
-  display: grid;
-  align-items: center;
+#accountheader {
+  margin-left: 14%;
+}
+
+#account-form {
+  display: flex;
   justify-content: center;
 }
 
-.editPhotoContainer {
-  margin-top: 50px;
-  margin-left: 20px;
-  display: block;
-}
-
-.profilePicture {
-  width: 500px;
-  object-fit: cover;
-  border-radius: 0% 0% 25% 0%;
-}
-
-.editPhotoIcon {
-  position: absolute;
-  left: -10px;
-}
-
-.divForBio,
-.divForGender,
-.divForDOB,
-.divForGenderPref,
-.divForAgePref {
+#account-form section {
   display: flex;
-  font-family: "Poppins", sans-serif;
+  flex-direction: column;
+  padding: 20px;
+  width: 35%;
+  text-align: start;
+}
+
+.settinsLabelTitle {
+  font-weight: bold;
   font-size: larger;
-  padding: 10px;
-  justify-content: space-between;
-}
-
-.accountHeader {
-  font-family: "Tajawal", sans-serif;
-  margin: 20px;
-  font-size: 30px;
-}
-.accountBio {
-  border: 1px solid #fafafa;
-  min-height: 100px;
-}
-
-.genderOptions {
-  width: 150px;
-}
-
-.ageRangePreference {
-  border: 1px solid #fafafa;
-}
-
-.accountAgeRangeInput {
-  cursor: pointer;
-}
-
-.updateAccount,
-.accountLogout,
-.deleteAccount {
-  width: 200px;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  transform: translate(70%, 0%);
-  border-radius: 25px;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  margin-top: 10px;
 }
 
-.deleteAccount:hover {
+#account-form input,
+#settingsLogoutBtn {
+  padding: 15px 30px;
+  margin: 10px 0;
+  font-size: 15px;
+  border: solid 2px lightgray;
+  border-radius: 10px;
+  font-size: larger;
+}
+
+.settingsHeader {
+  margin: 20px 0;
+}
+
+#account-form input::-webkit-outer-spin-button,
+#account-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#account-form label {
+  margin: 10px 0;
+}
+
+#account-form .multiple-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#account-form .multiple-input-container input {
+  margin-right: 10px;
+}
+
+#account-form .multiple-input-container label {
+  padding: 10px;
+  border: solid 2px lightgray;
+  border-radius: 10px;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+#account-form input[type="number"],
+#gender {
+  width: 10%;
+}
+
+#account-form .multiple-input-container input[type="radio"] {
+  display: none;
+}
+
+#account-form input[type="radio"]:checked + label {
+  border: solid 2px red;
+}
+
+#account-form input[type="submit"]:hover,
+#settingsLogoutBtn:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+#account-form input[type="submit"]:active {
   background-color: tomato;
 }
 
-.updateAccount:hover {
-  background-color: #29b3cd;
+#account-form .photo-container img {
+  width: 100%;
 }
 
-.accountLogout:hover {
-  background-color: lightgray;
+#settingsLogoutBtn {
 }

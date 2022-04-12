@@ -4,7 +4,7 @@ import User from "../models/User.js";
 import bcrypt from "bcrypt";
 
 //UPDATE A USER
-router.put("/:id", async (req, res) => {
+router.put("/:id", async (req, res) => { 
   if (req.body.userId === req.params.id) {
     if (req.body.password) {
       const salt = await bcrypt.genSalt(10);
