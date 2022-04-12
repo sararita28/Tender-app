@@ -6,6 +6,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-server": "cd backend && nodemon server.js",
     "start-frontend": "cd frontend && react-scripts start",
